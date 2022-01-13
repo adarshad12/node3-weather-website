@@ -6,6 +6,7 @@ const geocode = require('./utills/geocode')
 const forecast = require('./utills/forecast')
 
 const app = express()
+const port = process.env.PORT || 3000 //env stands for environment to acess environment variable   and default callback for running code in our local system
 
 //Define paths for express config
 // console.log(__dirname)
@@ -106,6 +107,7 @@ app.get('*', (req, res) => {
 //     res.render('weather')
 // })
 
-app.listen(3000, () => {
-    console.log('server is up on port 3000')
+//need to change port value for heroku to provide us a value
+app.listen(port, () => {
+    console.log('server is up on port' + port)
 })
