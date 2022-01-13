@@ -9,11 +9,14 @@ const forecast = (latitude, longitude, callback) => {
         } else if (response.body.error) {
             callback('Coordinate error', undefined)
         } else {
+            // console.log(response.body.location)
             callback(undefined, {
                 temperature: 'It is currently ' + response.body.current.temperature +
                     ' degrees out. It feels like ' + response.body.current.feelslike +
                     ' degrees out.',
-                location: response.body.location.name
+                location: response.body.location.name,
+                humidity: 'Humidity :- ' + response.body.current.humidity,
+                uv_index: 'UV Index :-' + response.body.current.uv_index
             })
         }
     })
