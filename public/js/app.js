@@ -1,5 +1,3 @@
-console.log('this is script loaded in developer tools in chrome')
-
 const weatherform = document.querySelector('form')
 const search = document.querySelector('input')
 const msg1 = document.querySelector('#msg-1')
