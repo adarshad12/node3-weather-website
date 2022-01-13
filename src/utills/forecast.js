@@ -16,7 +16,7 @@ const forecast = (latitude, longitude, callback) => {
                     ' degrees out.',
                 location: response.body.location.name,
                 humidity: 'Humidity :- ' + response.body.current.humidity,
-                uv_index: 'UV Index :-' + response.body.current.uv_index
+                uv_index: 'UV Index :- ' + response.body.current.uv_index
             })
         }
     })
